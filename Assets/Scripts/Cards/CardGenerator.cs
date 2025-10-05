@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CardGenerator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Card cardPrefab;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        for (int i = 0; i < 8; i++)
+        {
+            Spawn();
+        }
+    }
+    //Cardの生成
+    public void Spawn()//()は、今からこの関数作りますって意味？でもStart()とかがあるってことは、元々意味がある関数を使うっていうこと？
+    {
+        Instantiate(cardPrefab);
     }
 }
