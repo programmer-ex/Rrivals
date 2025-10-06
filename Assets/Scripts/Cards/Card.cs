@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;//を取得してプログラム実行するよってこと
 
 public class Card : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //カードUI
+    //ゲーム内の処理
+    [SerializeField] Text nameText;
+    [SerializeField] Text numberText;
+    [SerializeField] Image icon;
+    [SerializeField] Text descriptionText;
+
+    public void Set(CardBase cardBase)
     {
-
+        nameText.text = cardBase.Name;
+        numberText.text = cardBase.Number.ToString();//text型にint型が入ってる→.ToString()で解決
+        icon.sprite = cardBase.Icon;
+        descriptionText.text = cardBase.Description;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 }
 
 /*
@@ -31,6 +36,7 @@ Rrivalsの作り方オフライン編
 ・新規作成/素材のインポート
 ・カードPrefabの作成
 ・カードの作成
+・カードの多様化、＃Cardと＃CardBaseを使うなんで？
 ・GameMasterとBattlerの作成
 ・手札にカードを配る
 ・カードを選択して場に出す（SubmitPositionの作成）
