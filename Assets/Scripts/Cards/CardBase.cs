@@ -10,13 +10,14 @@ public class CardBase : ScriptableObject
     [SerializeField] CardType type;
     [SerializeField] int number;
     [SerializeField] Sprite icon;
+    [TextArea]
     [SerializeField] string description;
 
     public string Name { get => name; }
-    public CardType type { get => type; }
-    public int number { get => number; }
-    public Sprite icon { get => icon; }
-    public string description { get => description; }
+    public CardType Type { get => type; }
+    public int Number { get => number; }
+    public Sprite Icon { get => icon; }
+    public string Description { get => description; }
 
     ///SerializeFieldってなんやっけ、publicとprivateの中間的な感じやったと思うけど
     /// publicはゲーム中に値をいじりたいとき
