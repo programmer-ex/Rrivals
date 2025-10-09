@@ -7,12 +7,13 @@ public class Card : MonoBehaviour
 {
     //カードUI
     //ゲーム内の処理
-    [SerializeField] Text nameText;
+    [SerializeField] Text nameText;//カード情報の取得
     [SerializeField] Text numberText;
     [SerializeField] Image icon;
     [SerializeField] Text descriptionText;
 
-    public void Set(CardBase cardBase)
+    public void Set(CardBase cardBase)//これはなんの意味？なぜ２個同じ単語続ける？使わんのにここで定義したいみは？CardBaseからの取得？てかCardBaseってどこにスクリプト貼り付けてるん？これだけでCardBaseの8つのカード全て対応して設定できる？
+
     {
         nameText.text = cardBase.Name;
         numberText.text = cardBase.Number.ToString();//text型にint型が入ってる→.ToString()で解決

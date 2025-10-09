@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class CardGenerator : MonoBehaviour
 {
+    [SerializeField] CardBase[] cardBases;//CardBaseからリストを作成？名前はcardBases?
     [SerializeField] Card cardPrefab;
 
     private void Start()
     {
         for (int i = 0; i < 8; i++)
         {
-            Spawn();
+            Spawn(i);//どこにspawnすんねん？spawnはそれだけで意味通じる？
         }
     }
     //Cardの生成
-    public void Spawn()//()は、今からこの関数作りますって意味？でもStart()とかがあるってことは、元々意味がある関数を使うっていうこと？
+    public void Spawn(int number)//()は、今からこの関数作りますって意味？でもStart()とかがあるってことは、元々意味がある関数を使うっていうこと？
     {
-        Instantiate(cardPrefab);
+        Card card = Instantiate(cardPrefab);
+        card.Set(cardBases[number]);
+        ///0番目が与えられたら、0番目のやつをデータとしてセットする関数
+        /// (int number)のnumberがここのnumberに渡されてる？なぜSet関数の呼び出しはこっち？カード
     }
 }

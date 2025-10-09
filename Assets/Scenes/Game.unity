@@ -166,6 +166,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb888ccb06a0e4b7e8aaedb6a4b10fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardBases:
+  - {fileID: 11400000, guid: dc7bcf372150f47bc9aecc7f21263a5b, type: 2}
+  - {fileID: 11400000, guid: 3daa56a690b284882971b8de27169dc1, type: 2}
+  - {fileID: 11400000, guid: 19d432511c7d34bb9b5f27d20eb98546, type: 2}
+  - {fileID: 11400000, guid: 871680f8f07864dd5bac7342a162ea03, type: 2}
+  - {fileID: 11400000, guid: 05875ce75d4194b9b9548e1033a5cb69, type: 2}
+  - {fileID: 11400000, guid: 09525a3524571414d8e6b6975c93884e, type: 2}
+  - {fileID: 11400000, guid: 7abaa252082c04c21b1de59eaca6e711, type: 2}
+  - {fileID: 11400000, guid: c472aa1d180c44ca794d00af3574a3c1, type: 2}
   cardPrefab: {fileID: -3434765062092944876, guid: 54fd6b81496284205aecc14e5b7c7bc1, type: 3}
 --- !u!1 &519420028
 GameObject:
