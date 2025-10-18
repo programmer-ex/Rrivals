@@ -14,7 +14,7 @@ public class GameMaster : MonoBehaviour
 
     private void Start()
     {
-
+        Setup();
     }
 
     //カードを生成して配る
@@ -22,7 +22,9 @@ public class GameMaster : MonoBehaviour
     {
         for (int i = 0; i < 8; i++)
         {
-            cardGenerator.Spawn();
+            Card card = cardGenerator.Spawn(i);//「カードを渡される」
+                                               //「これをプレイヤーの手札に追加」
+            player.Hand.Add(card);
         }
     }
 
